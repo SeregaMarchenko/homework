@@ -25,13 +25,13 @@ public class Task_5 {
         for (double element : array) {
             System.out.print(element + " ");
         }
-        for (int i = 0; i < array.length/2; i++) {
+        for (int i = 0; i < array.length / 2; i++) {
             double element;
             element = array[i];
             array[i] = array[array.length - i - 1];
             array[array.length - i - 1] = element;
         }
-        System.out.println("\nмассив почле преобразования:");
+        System.out.println("\nмассив после преобразования:");
         for (double element : array) {
             System.out.print(element + " ");
         }
