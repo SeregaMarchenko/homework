@@ -13,6 +13,7 @@ public class Task_2 {
         Pattern patterMail = Pattern.compile("\\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}\\b");
         Pattern patterDokNumber = Pattern.compile("\\b\\d{4}-\\d{4}-\\d{2}\\b");
         Pattern patterNumberPhone = Pattern.compile("\\+\\(\\d{2}\\)\\d{7}\\b");
+        //тут должен быть regex "\\b\\+\\(\\d{2}\\)\\d{7}\\b" но он почему-то не работает ¯\_(ツ)_/¯
         Matcher matcherMail = patterMail.matcher(line);
         Matcher matcherNumberPhone = patterNumberPhone.matcher(line);
         Matcher matcherDocNumber = patterDokNumber.matcher(line);
