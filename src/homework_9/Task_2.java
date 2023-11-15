@@ -13,9 +13,7 @@ public class Task_2 {
         arrayStr.add(SCANNER.nextLine().trim());
         arrayStr.add(SCANNER.nextLine().trim());
         arrayStr.add(SCANNER.nextLine().trim());
-        arrayStr.stream()
-                .sorted(Comparator.comparing(String::length))
-                .forEach(System.out::println);
+        arrayStr.stream().sorted(Comparator.comparing(String::length)).forEach(System.out::println);
     }
 }
 
