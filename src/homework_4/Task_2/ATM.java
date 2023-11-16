@@ -29,7 +29,7 @@ public class ATM {
                 money += 100;
                 count_100++;
             }
-            while (moneyInput - 50 == 20 || moneyInput == 50) {
+            while (moneyInput - 50 == 40 ||moneyInput - 50 == 20 || moneyInput == 50) {
                 moneyInput -= 50;
                 money += 50;
                 count_50++;
@@ -66,7 +66,7 @@ public class ATM {
                 money -= 100;
                 count_100 -= 1;
             }
-            while (count_50 != 0 && (moneyInput - 50 == 20 || moneyInput == 50)) {
+            while (count_50 != 0 && (moneyInput - 50 == 40||moneyInput - 50 == 20 || moneyInput == 50)) {
                 moneyInput -= 50;
                 money -= 50;
                 count_50 -= 1;
