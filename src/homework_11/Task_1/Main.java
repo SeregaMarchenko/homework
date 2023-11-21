@@ -28,7 +28,7 @@ public class Main {
         if (login.length() >= 20 || login.contains(" ")) {
             throw new WrongLoginException("Некорректный ввод логина");
         }
-        if (password.length() >= 20 || password.contains(" ") || isHasDigit(password) || (!password.equals(confirmPassword))) {
+        if (password.length() >= 20 || password.contains(" ") || (!isHasDigit(password)) || (!password.equals(confirmPassword))) {
             throw new WrongPasswordException("Некорректный ввод пароля");
         }
         return true;
