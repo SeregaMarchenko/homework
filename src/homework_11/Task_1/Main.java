@@ -4,6 +4,8 @@ import homework_11.Task_1.Exception.WrongLoginException;
 import homework_11.Task_1.Exception.WrongPasswordException;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Main {
 
@@ -35,14 +37,8 @@ public class Main {
     }
 
     public static boolean isHasDigit(String password) {
-        return password.contains("1") ||
-                password.contains("2") ||
-                password.contains("3") ||
-                password.contains("4") ||
-                password.contains("5") ||
-                password.contains("6") ||
-                password.contains("7") ||
-                password.contains("8") ||
-                password.contains("9");
+        Matcher matcher = Pattern.compile("[0-9]").matcher(password);
+        matcher.find();
+        return (!matcher.group().isBlank());
     }
 }
