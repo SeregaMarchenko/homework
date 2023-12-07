@@ -29,8 +29,8 @@ public class Task_2 {
             hashMap.put(i + 1, NAMES[i]);
         }
         ArrayList<String> names = (ArrayList<String>) hashMap.entrySet().stream()
-                .filter(entry->correctId.contains(entry.getKey())&&entry.getValue().length()%2!=0)
-                .peek(entry-> entry.setValue(String.valueOf(new StringBuilder(entry.getValue()).reverse())))
+                .filter(entry -> correctId.contains(entry.getKey()) && entry.getValue().length() % 2 != 0)
+                .peek(entry -> entry.setValue(String.valueOf(new StringBuilder(entry.getValue()).reverse())))
                 .map(Map.Entry::getValue)
                 .collect(Collectors.toList());
         System.out.println(names);
