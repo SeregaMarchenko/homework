@@ -30,7 +30,7 @@ public class Task_2 {
         }
         ArrayList<String> names = (ArrayList<String>) hashMap.entrySet().stream()
                 .filter(entry->correctId.contains(entry.getKey())&&entry.getValue().length()%2!=0)
-                .peek(entry-> new StringBuilder(entry.getValue()).reverse())
+                .peek(entry-> entry.setValue(String.valueOf(new StringBuilder(entry.getValue()).reverse())))
                 .map(Map.Entry::getValue)
                 .collect(Collectors.toList());
         System.out.println(names);
